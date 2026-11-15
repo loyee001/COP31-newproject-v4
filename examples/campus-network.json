@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "metadata": {
+    "title": "示例校园人行道网络",
+    "provenance": "synthetic-example",
+    "weather": "Synthetic example; not a weather forecast"
+  },
+  "bounds": { "width": 220, "height": 120 },
+  "location": { "latitude": 31.23, "longitude": 121.47, "timezone": 8 },
+  "treeTemplate": { "height": 8, "radius": 4.6, "cost": 95 },
+  "paths": [
+    { "id": "main-east-west", "name": "教学区主步道", "width": 5, "demand": 1, "points": [{ "x": 20, "y": 30 }, { "x": 110, "y": 30 }, { "x": 200, "y": 30 }] },
+    { "id": "north-south", "name": "南北联络步道", "width": 5, "demand": 1, "points": [{ "x": 110, "y": 12 }, { "x": 110, "y": 75 }, { "x": 110, "y": 110 }] },
+    { "id": "library-canteen", "name": "图书馆至食堂步道", "width": 4, "demand": 0.8, "points": [{ "x": 35, "y": 75 }, { "x": 110, "y": 75 }, { "x": 200, "y": 75 }] },
+    { "id": "shared-section", "name": "共线路段与活动区支路", "width": 5, "demand": 0.6, "points": [{ "x": 80, "y": 30 }, { "x": 150, "y": 30 }, { "x": 150, "y": 60 }] }
+  ],
+  "buildings": [
+    { "id": "teaching-block", "name": "教学楼", "height": 13, "polygon": [{ "x": 3, "y": 14 }, { "x": 15, "y": 14 }, { "x": 15, "y": 49 }, { "x": 3, "y": 49 }] },
+    { "id": "library-block", "name": "图书馆", "height": 12, "polygon": [{ "x": 45, "y": 87 }, { "x": 90, "y": 87 }, { "x": 90, "y": 110 }, { "x": 45, "y": 110 }] },
+    { "id": "canteen-block", "name": "食堂", "height": 9, "polygon": [{ "x": 183, "y": 84 }, { "x": 212, "y": 84 }, { "x": 212, "y": 111 }, { "x": 183, "y": 111 }] },
+    { "id": "activity-block", "name": "活动楼", "height": 10, "polygon": [{ "x": 158, "y": 46 }, { "x": 196, "y": 46 }, { "x": 196, "y": 65 }, { "x": 158, "y": 65 }] }
+  ],
+  "trees": [
+    { "id": "existing-main-1", "x": 38, "y": 24.5, "height": 8, "radius": 4.6 },
+    { "id": "existing-main-2", "x": 68, "y": 24.5, "height": 8, "radius": 4.6 },
+    { "id": "existing-north", "x": 104.5, "y": 52, "height": 8, "radius": 4.6 },
+    { "id": "existing-library", "x": 64, "y": 69.5, "height": 8, "radius": 4.6 },
+    { "id": "existing-canteen", "x": 174, "y": 80.5, "height": 8, "radius": 4.6 }
+  ]
+}
