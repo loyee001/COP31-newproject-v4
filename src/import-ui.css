@@ -1,0 +1,59 @@
+.campus-import { margin-bottom: 16px; border: 1px solid var(--line, #dfe4df); border-radius: 4px; background: #fff; }
+.campus-import > summary { cursor: pointer; padding: 12px 14px; color: var(--ink, #27312b); font-size: 13px; font-weight: 550; }
+.campus-import > summary:focus-visible { outline: 2px solid var(--green, #37634b); outline-offset: -2px; }
+.import-body { padding: 0 14px 14px; }
+.import-actions, .import-drawing-actions, .import-path-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.import-actions { margin-bottom: 10px; }
+.import-file-label { cursor: pointer; }
+.import-file-label.disabled { opacity: .45; cursor: not-allowed; }
+.import-file-input { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.import-actions:has(.import-file-input:focus-visible) .import-file-label { outline: 2px solid var(--green, #37634b); outline-offset: 2px; }
+.import-hint { margin: 7px 0; color: var(--muted, #6d7770); font-size: 11px; line-height: 1.6; }
+.import-calibration { margin: 12px 0; padding: 12px 0; border-block: 1px solid var(--line, #dfe4df); }
+.import-calibration > label { display: block; font-size: 12px; margin-bottom: 7px; }
+.import-calibration > div { display: flex; align-items: center; gap: 8px; }
+.import-calibration input { max-width: 160px; }
+.import-drawing-actions { margin: 12px 0 9px; }
+.import-draft-hint, .import-empty { margin: 9px 0; padding: 9px 10px; background: #f5f7f1; color: var(--green, #37634b); font-size: 11px; line-height: 1.6; }
+.import-draft-hint span { white-space: nowrap; font-family: var(--mono, monospace); }
+.import-path-list { display: flex; flex-direction: column; gap: 10px; margin: 12px 0; }
+.import-path-row { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1fr); gap: 8px; padding-bottom: 10px; border-bottom: 1px solid var(--line, #dfe4df); }
+.import-path-row > label { display: block; min-width: 0; color: var(--muted, #6d7770); font-size: 10px; }
+.import-path-row input { display: block; width: 100%; min-width: 0; margin-top: 4px; padding: 7px 8px; border: 1px solid #cfd7d0; border-radius: 3px; background: #fff; color: var(--ink, #27312b); font-size: 12px; }
+.import-path-actions { grid-column: 1 / -1; }
+.import-status { margin: 9px 0 0; min-height: 1.5em; color: var(--green, #37634b); font-size: 11px; line-height: 1.6; overflow-wrap: anywhere; }
+.import-status:empty { min-height: 0; margin: 0; }
+.import-status.error { color: var(--red, #984a36); }
+#sun-map.import-drawing, #sun-map.import-drawing * { cursor: crosshair; }
+#sun-map.import-drawing:focus-visible { outline: 2px solid #b64b3d; outline-offset: 3px; }
+@media (max-width: 760px) {
+  .campus-import > summary { padding: 10px 12px; }
+  .import-body { padding: 0 12px 12px; }
+  .import-actions, .import-drawing-actions, .import-path-actions { gap: 6px; }
+  .import-path-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .import-path-row > label:first-child { grid-column: 1 / -1; }
+  .import-calibration > div { align-items: stretch; }
+  .import-calibration .button { flex-shrink: 0; }
+}
+
+/* Recognition stays next to the image; candidate geometry is not committed yet. */
+#recognition-toolbar { position: sticky; top: 0; z-index: 12; scroll-margin-top: 10px; }
+#recognition-toolbar:empty { display: none; }
+.recognition-toolbar { padding: 10px; margin-bottom: 9px; border: 1px solid #cbd9e7; border-radius: 4px; background: #fff; }
+.recognition-primary, .recognition-secondary { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.recognition-toolbar .button { padding: 6px 8px; min-height: 30px; font-size: 11px; line-height: 1.35; white-space: normal; }
+.recognition-strength { display: flex; align-items: center; gap: 5px; color: var(--muted, #6d7770); font-size: 10px; }
+.recognition-strength select { width: auto; min-height: 30px; padding: 3px 5px; border: 1px solid #cfd7d0; background: #fff; border-radius: 3px; font-size: 11px; }
+.recognition-summary { margin: 8px 0 4px; color: #225d9e; font-size: 11px; font-weight: 600; line-height: 1.5; }
+.recognition-hint { margin: 5px 0; color: var(--muted, #6d7770); font-size: 10px; line-height: 1.5; }
+.recognition-editing, .recognition-assumptions { margin-top: 6px; }
+.recognition-editing > summary, .recognition-assumptions > summary { width: fit-content; cursor: pointer; color: #536357; font-size: 10px; line-height: 1.5; }
+.recognition-toolbar .import-status { margin-top: 5px; font-size: 10px; }
+.recognition-path { cursor: pointer; pointer-events: stroke; }
+.recognition-node, .recognition-tree { cursor: grab; touch-action: none; pointer-events: all; }
+.recognition-node:active, .recognition-tree:active { cursor: grabbing; }
+.recognition-node:focus-visible, .recognition-tree:focus-visible { outline: none; stroke: #d17d13; stroke-width: 1.5px; }
+@media (max-width: 760px) {
+  .recognition-toolbar { padding: 8px; }
+  .recognition-toolbar .button { padding: 5px 6px; font-size: 10px; }
+}
