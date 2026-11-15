@@ -1,0 +1,9 @@
+{
+  "portedSource": "https://github.com/pythermalcomfort/pythermalcomfort/blob/f9027dc0cb246c5e087f9d7a425aea1ceba5235b/pythermalcomfort/models/utci.py",
+  "sha256": "d18bfeea4d8d9b5c721e6f46c4fa906737efdca04ce4614aff2c23a98fc182f7",
+  "polynomial": "Original UTCI a0.002, October 2009; operational 6th order approximation",
+  "license": "MIT; copyright 2019 Federico Tartarini",
+  "independentReference": "https://github.com/ecmwf/thermofeel/blob/master/thermofeel/thermofeel.py",
+  "independentSourceSha256": "19aa15512eb465e388ccc4cb6fc9302428267c341ecf573c654f56fa33c941b9",
+  "originalCoefficients": "https://utci.org/resources/UTCI%20Program%20Code.zip"
+}

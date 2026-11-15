@@ -1,0 +1,9 @@
+{
+  "originalSource": "https://utci.org/resources/UTCI%20Program%20Code.zip",
+  "originalFortranSha256": "85c06e2cc9806520359730d2a621050a5b627792ba92b33dc69f6ec7b25236bc",
+  "portedSource": "https://github.com/pythermalcomfort/pythermalcomfort/blob/f9027dc0cb246c5e087f9d7a425aea1ceba5235b/pythermalcomfort/models/utci.py",
+  "monomialCount": 210,
+  "maximumTotalDegree": 6,
+  "maximumCoefficientDifference": 2.168404344971009e-19,
+  "comparison": "Symbolically expanded polynomial coefficients (Ta, wind, deltaTmrt, vapourkPa) agree."
+}
